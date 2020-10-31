@@ -1,0 +1,9 @@
+{% extends 'blog/servicio.html' %}
+
+{% block content %}
+    {% for ser in servicios %}
+        <h2 style="color: black">{{ ser.title }} </h2>
+        <p>{{ ser.text|linebreacksbr}}</p>
+        <h3 style="text-align: center">{{ ser.precio|linebreacksbr }}</h3>
+    {% endfor %}
+{% endblock %}
