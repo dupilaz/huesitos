@@ -20,7 +20,7 @@
         <div class="header col-12">
                <div class="row">
                     <div class="col-sm-12 col-md-3">
-                        <img class="logo" src="Images/logotipo.png">
+                        <img class="logo" src="{% static 'Images/logotipo.png' %}">
                     </div>
                     <div class="col-12 col-md-6" style="text-align: center;">
                         <ul class="col-md-12">
@@ -41,13 +41,17 @@
                 </div>
         </div>
         <div class="row" style="text-align: center">
-            <div class="plan col-10 col-sm-5  col-lg-3 col-center"></div>
-                {% block content %}
-
-
-                {% endblock %}
-            </div>
-             
+        
+         {% for ser in servicios %}
+            <div class="plan col-10 col-sm-5  col-lg-3 col-center">
+                
+                <h2 style="color: black">{{ ser.title }} </h2>
+                <p>{{ ser.text}}</p>
+                <h3 style="text-align: center">{{ ser.precio }}</h3>
+                
+            </div>      
+        {% endfor %}
+        
         
             <div class="footer col-md-12">
             <div class="row">

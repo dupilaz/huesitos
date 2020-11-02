@@ -10,8 +10,8 @@ def prueba(request):
     return render(request, 'blog/prueba.html')
 
 def servicios(request):
-    servicios = Servicio.objects.all()
-    return render(request, 'blog/servicio.html', {'servicios':servicios})    
+    servicios=Servicio.objects.all()
+    return render(request, 'blog/servicio.html', {"servicios":servicios})    
 def contacto(request):
     
     return render(request, 'blog/contacto.html')      
