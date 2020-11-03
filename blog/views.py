@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Servicio
+from .forms import PostForm
+from django.shortcuts import redirect
 
 # Create your views here.
 
@@ -15,3 +17,19 @@ def servicios(request):
 def contacto(request):
     
     return render(request, 'blog/contacto.html')      
+
+def servicio_new(request):
+    form = PostForm()
+    return render(request, 'blog/servicio_edit.html', {'form': form})
+def post_new(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('/', pk=post.pk)
+    else:
+        form = PostForm()
+    return render(request, 'blog/servicio_edit.html', {'form': form})
