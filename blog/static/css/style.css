@@ -125,6 +125,33 @@ a{
 #menu:target{
     display: block;
 }
+form input{
+    background-color:rgb(124,222,174) ;
+    border: 1px solid red;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+form textarea{
+    margin: 0 ,auto;
+    height: 40px;
+    width: 80%;
+    background-color:rgb(124,222,174) ;
+    border: 1px solid red;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px!important;
+}
+.formulario{
+    margin-top: 20px;
+    padding: 0;
+}
+
+
 
 
 
