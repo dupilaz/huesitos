@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+from django import forms
 
 
 class Servicio(models.Model):
@@ -14,13 +14,28 @@ class Servicio(models.Model):
         return self.title
 
 class Reclamo(models.Model):
+    
+    
 
-    Rut=models.CharField(max_length=10)
+    Rut = models.CharField(max_length=10)
+                           #widget= forms.TextInput
+                           #(attrs={'placeholder':'12345678-9'}))
     Nombres=models.CharField(max_length=50)
-    Apellidos=models.CharField(max_length=50)
-    Correo=models.EmailField()
+                            #widget= forms.TextInput
+                           #(attrs={'placeholder':'Juan Perez'}))
+    
+    Correo=models.EmailField( max_length=50)
+                            #widget= forms.TextInput
+                           #(attrs={'placeholder':'Ejemplo@Ejemplo.com'}))
     Telefono=models.CharField(max_length=50)
-    Asunto=models.TextField()
+                            #widget= forms.TextInput
+                            #(attrs={'placeholder':'987654321'}))
+    Asunto=models.CharField(max_length=100)
+                            #widget= forms.TextInput
+                            #(attrs={'placeholder':'descripcion'}))
+
+
 
     def __str__(self):
         return self.Rut
+ 

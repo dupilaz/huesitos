@@ -15,12 +15,12 @@ def servicios(request):
     servicios=Servicio.objects.all()
     return render(request, 'blog/servicio.html', {"servicios":servicios})    
 def contacto(request):
-    
-    return render(request, 'blog/contacto.html')      
-
-def servicio_new(request):
     form = PostForm()
-    return render(request, 'blog/servicio_edit.html', {'form': form})
+    return render(request, 'blog/contacto.html', {'form': form})
+        
+
+
+   
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -32,4 +32,4 @@ def post_new(request):
             return redirect('/', pk=post.pk)
     else:
         form = PostForm()
-    return render(request, 'blog/servicio_edit.html', {'form': form})
+    return render(request, 'blog/contacto.html', {'form': form})

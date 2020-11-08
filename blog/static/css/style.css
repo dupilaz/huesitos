@@ -131,12 +131,13 @@ form input{
     border-top: none;
     border-left: none;
     border-right: none;
+    width: 80%;
 }
 
 form textarea{
     margin: 0 ,auto;
     height: 40px;
-    width: 80%;
+    width: 90%;
     background-color:rgb(124,222,174) ;
     border: 1px solid red;
     border-top: none;
@@ -149,7 +150,17 @@ form textarea{
 .formulario{
     margin-top: 20px;
     padding: 0;
+    text-align: center;
 }
+.subir{
+    position: relative;
+    animation: mymove 0.5s ;
+}
+@keyframes mymove {
+    from {top: 200px;}
+    to {top: 0px;}
+  }
+
 
 
 
