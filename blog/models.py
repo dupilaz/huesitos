@@ -11,6 +11,7 @@ class Servicio(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     precio = models.CharField(max_length=10)
+    imagen= models.ImageField(upload_to="Servicios",null=False)
         
     
     def __str__(self):
@@ -36,8 +37,6 @@ class Reclamo(models.Model):
     Asunto=models.CharField(max_length=100)
                             #widget= forms.TextInput
                             #(attrs={'placeholder':'descripcion'}))
-
-
 
     def __str__(self):
         return self.Rut

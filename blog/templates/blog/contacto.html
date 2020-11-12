@@ -24,7 +24,7 @@
                     <img class="logo" src="{% static 'Images/logotipo.png' %}">
                 </div>
                    
-                <div class="col-12 col-md-6" style="text-align: center;">
+                <div class="col-12 col-md-6 center">
                     <ul class="col-md-12">
                         <li class="menu"><a href="/">Inicio</a></li>
                         <li class="menu"><a href="servicio">Servicios</a></li>
@@ -46,11 +46,11 @@
 
 
         <div class="col-12" >
-            <h1 style="text-align:center;" >Contacto <spam style="color: red;">Clinica Huesitos</spam></h1>
+            <h1 class="center" >Contacto <spam style="color: red;">Clinica Huesitos</spam></h1>
         </div>
-        <div class="row subir" style="margin-bottom: 50px; padding: 0% 2%;">
+        <div class="row subir" style="margin-bottom: 50px; padding: 0% 4%;">
             <div class="col-12 col-md-8" style="padding: 0; background-color: rgb(124,222,174);">
-                <h2 style="width: 30%; text-align: center; ">contacto</h2>
+                
                 <form method="POST" class="post-form">{% csrf_token %}
                     <div class="row">
                     <div class="col-12 col-md-6 formulario">
@@ -81,23 +81,24 @@
                     
                     </div>
 
+
                 </div>
                     
-                    <div style="margin: 25px; text-align: center;">
+                    <div style="margin: 25px;" class="center">
                         <button type="submit" class="save btn btn-default" style="background-color: red;height: 50px; width: 80%;" >Enviar</button>
                         
                     </div>  
                 </form>
             </div>
-            <div class="col-12 col-md-4" style="background-color: blue;">
-                <h4 style="text-align: center;">Acerca de Nosotros</h4>
+            <div class="col-12 col-md-4" style="background-color: rgb(28, 129, 196);">
+                <h4 class="center">Acerca de Nosotros</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Antonio Varas 666, Providencia</li>
                         <li><i class="fa fa-mobile"></i> +(569) 90286657</li>
                         <li><i class="fa fa-envelope"></i> contacto@ClinicaHuesitos.com</li>
                     </ul>
-                    <p style="text-align: center;">nosotros queremos a tus mascotas por eso tenemos planes para todo tipo de personas con profesionales experimentados y calificados <br>visitanos en Antonio Varas 666</p>
-                    <p style="text-align: center;">ClinicaHuesitos.cl</p>
+                    <p class="center">nosotros queremos a tus mascotas por eso tenemos planes para todo tipo de personas con profesionales experimentados y calificados <br>visitanos en Antonio Varas 666</p>
+                    <p class=" center;">ClinicaHuesitos.cl</p>
                     
             </div>
         </div>
@@ -141,7 +142,7 @@
 
                 </div>
                 <div class="col-12">
-                    <p style="text-align: center; color: black;">Antonio Varas 666, Providencia, Región Metropolitana</p>
+                    <p class="center" style=" color: black;">Antonio Varas 666, Providencia, Región Metropolitana</p>
                 </div>
                 <div style="text-align: end;" class="col-sm-12">
 
