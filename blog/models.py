@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils import timezone
-from django import forms
+
+
+
+
 
 
 class Servicio(models.Model):
@@ -18,7 +21,7 @@ class Reclamo(models.Model):
     
 
     Rut = models.CharField(max_length=10)
-                           #widget= forms.TextInput
+                            #widget= forms.TextInput
                            #(attrs={'placeholder':'12345678-9'}))
     Nombres=models.CharField(max_length=50)
                             #widget= forms.TextInput

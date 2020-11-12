@@ -1,4 +1,5 @@
 {% load static %}
+{% load widget_tweaks %}
 <html>
     <head>
         
@@ -47,33 +48,37 @@
         <div class="col-12" >
             <h1 style="text-align:center;" >Contacto <spam style="color: red;">Clinica Huesitos</spam></h1>
         </div>
-        <div class="row subir" style="margin-bottom: 50px;">
+        <div class="row subir" style="margin-bottom: 50px; padding: 0% 2%;">
             <div class="col-12 col-md-8" style="padding: 0; background-color: rgb(124,222,174);">
                 <h2 style="width: 30%; text-align: center; ">contacto</h2>
                 <form method="POST" class="post-form">{% csrf_token %}
                     <div class="row">
                     <div class="col-12 col-md-6 formulario">
                         <h4>Rut</h4>
-                         {{form.Rut}} 
+                         {% render_field form.Rut placeholder="11111111-1" %} 
                     </div> 
                     <div class="col-12 col-md-6  formulario">
                         <h4>Nombres</h4>
-                        {{form.Nombres}}
+                        {% render_field form.Nombres placeholder="Juan Perez"%}
+                        
                     </div>
                     
 
                     <div class="col-12 col-md-6  formulario">
                             <h4>Correo</h4>
-                            {{ form.Correo }}
+                            {% render_field form.Correo placeholder="Ejemplo@Ejemplo.cl"%}
+                           
                     </div>
                         
                     <div class="col-12 col-md-6  formulario">
                         <h4>Telefono</h4>
-                        {{ form.Telefono }}
+                        {% render_field form.Telefono placeholder="987654321"%}
+               
                     </div>
                     <div class="col-12 formulario">
                         <h4>Asunto</h4>
-                        {{ form.Asunto }}
+                        {% render_field form.Asunto placeholder="Descripcion"%}
+                    
                     </div>
 
                 </div>
@@ -91,8 +96,8 @@
                         <li><i class="fa fa-mobile"></i> +(569) 90286657</li>
                         <li><i class="fa fa-envelope"></i> contacto@ClinicaHuesitos.com</li>
                     </ul>
-                    <p>nosotros queremos a tus mascotas por eso tenemos planes para todo tipo de personas con profesionales experimentados y calificados <br>visitanos en Antonio Varas 666</p>
-                    <p>ClinicaHuesitos.cl</p>
+                    <p style="text-align: center;">nosotros queremos a tus mascotas por eso tenemos planes para todo tipo de personas con profesionales experimentados y calificados <br>visitanos en Antonio Varas 666</p>
+                    <p style="text-align: center;">ClinicaHuesitos.cl</p>
                     
             </div>
         </div>
