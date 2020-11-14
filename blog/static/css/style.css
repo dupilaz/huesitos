@@ -84,9 +84,9 @@ a{
     font-size: 15px;
 }
 .plan{
-    background-color: rgb(124,222,174);
+    /*background-color: rgb(124,222,174);*/
     overflow: hidden;
-    color:rgb(124,222,174);
+    color:rgba(255, 255, 255,0);
     margin: 30px 50px;
     padding: 20px;
     text-align: center; 

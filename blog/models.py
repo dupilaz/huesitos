@@ -11,7 +11,7 @@ class Servicio(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     precio = models.CharField(max_length=10)
-    imagen= models.ImageField(upload_to="Servicios",null=False)
+    imagen= models.ImageField(upload_to="gallery",null=True)
         
     
     def __str__(self):
