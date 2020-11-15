@@ -86,7 +86,9 @@ a{
 .plan{
     /*background-color: rgb(124,222,174);*/
     overflow: hidden;
-    color:rgba(255, 255, 255,0);
+    color :rgba(255, 255, 255,0);
+    font-weight: bolder;
+    
     margin: 30px 50px;
     padding: 20px;
     text-align: center; 
