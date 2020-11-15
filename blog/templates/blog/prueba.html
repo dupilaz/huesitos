@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/carrusel.css' %}">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="https://kit.fontawesome.com/ba09ff24cd.js" crossorigin="anonymous"></script>
    
@@ -56,23 +57,35 @@
                 
 
         </div>
-       
-        <div class="col-12">
-            <div style="text-align: center;" class="w3-content class=col-12 col-md-8">
-                  <img class="mySlides" src="{% static 'Images/gatito3.1.jpg' %}" style="width:100%; max-height: 400px">
-                  <img class="mySlides" src="{% static 'Images/conejo2.jpg' %}" style="width:100%; max-height: 400px">
-                  <img class="mySlides" src="{% static 'Images/perrito1.jpg' %}" style="width:100%; max-height: 400px">
-                <img class="mySlides" src="{% static 'Images/perrito1.2_vet.jpg' %}" style="width:100%; max-height: 400px">
-            </div>
-           
-            <div class="w3-center">
-                <div class="w3-section">
-                    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
-                    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
-                </div>
+        <div class="col-10" style="margin:auto">
+  
+            <ul class="slider">
+              <li id="slide1">
+                <img src="{% static 'Images/conejo2.jpg' %}"/>
+              </li>
+              <li id="slide2">
+                <img src="{% static 'Images/perrito1.jpg' %}"/>
+              </li>
+              <li id="slide3">
+                <img src="{% static 'Images/perrito1.2_vet.jpg' %}"/>
+              </li>
+            </ul>
+            <div class="center">
+                <ul class="menu">
+                <li>
+                    <a href="#slide1"></a>
+                </li>
+                <li>
+                    <a href="#slide2"></a>
+                </li>
+                <li>
+                    <a href="#slide3"></a>
+                </li>
+                </ul>
+            </div>  
+            
+          </div>
 
-            </div>
-        </div>
         
          
         
@@ -130,5 +143,6 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     </body>
 </html>
